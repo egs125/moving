@@ -32,11 +32,12 @@ export default function Item({ info }) {
       </CardContent>
       <CardActions>
         { link ? (
-          <Link 
-            component="button"
+          <Link
             variant="body2"
             underline="hover"
             href={link}
+            target="_blank"
+            rel="noopener"
           >
             {'구매 링크'}
           </Link>
