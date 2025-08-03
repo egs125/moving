@@ -11,12 +11,12 @@ export default function Item({ info }) {
   const { id, title, remarks, detail, link, price, img } = info;
 
   return (
-    <Card sx={{ width: 345, height: 385 }}>
+    <Card sx={{ width: '100%' }}>
       <CardHeader title={`${id}. ${title}`} />
       <CardMedia
         component="img"
         alt={title}
-        height="150"
+        sx={{ height: 150, width: '100%' }}
         image={img}
       />
       <CardContent sx={{ height: 80 }}>

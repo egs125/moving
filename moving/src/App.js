@@ -3,7 +3,7 @@ import List from "./List";
 
 function App() {
   return (
-    <Container maxWidth="xl">
+    <Container sx={{ margin: '1rem 0 1rem 0'}}>
       <List />
     </Container>
   );
