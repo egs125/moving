@@ -11,7 +11,7 @@ export default function Item({ info }) {
   const { id, title, remarks, detail, link, price, img } = info;
 
   return (
-    <Card sx={{ width: 345, height: 350 }}>
+    <Card sx={{ width: 345, height: 385 }}>
       <CardHeader title={`${id}. ${title}`} />
       <CardMedia
         component="img"
@@ -19,7 +19,7 @@ export default function Item({ info }) {
         height="150"
         image={img}
       />
-      <CardContent>
+      <CardContent sx={{ height: 80 }}>
         <Typography variant="body2">
           {remarks}
         </Typography>
