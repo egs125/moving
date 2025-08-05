@@ -17,7 +17,16 @@ export default function Item({ info }) {
   const onClose = () => setOpen(false);
 
   return (
-    <Card sx={{ width: '100%' }}>
+    <Card
+      sx={{
+        width: 320,
+        height: 380,
+        display: 'flex',
+        flexDirection: 'column',
+        mx: 'auto',
+        boxSizing: 'border-box',
+      }}
+    >
       <Modal
         open={open}
         onClose={onClose}
@@ -44,30 +53,71 @@ export default function Item({ info }) {
             </div>
           </Box>
           <Box sx={{ mt: 2 }}>
-            <img src={`/moving/images/${img}`} alt={title} style={{ maxHeight: '80vh', maxWidth: '90vw', display: 'block', margin: '0 auto' }} />
+            <img 
+              src={`/moving/images/${img}`} 
+              alt={title} 
+              style={{ maxHeight: '80vh', maxWidth: '90vw', display: 'block', margin: '0 auto' }} 
+            />
           </Box>
         </Box>
       </Modal>
-      <CardHeader title={`${id}. ${title}`} />
+      <CardHeader title={`${id}. ${title}`} sx={{ p: 1, minHeight: 48 }} />
       <CardMedia
         component="img"
         alt={title}
-        sx={{ height: 150, width: '100%' }}
-        image={`/moving/images/${img}`} // Fallback image
+        sx={{
+          height: 140,
+          width: '100%',
+          objectFit: 'cover',
+        }}
+        image={`/moving/images/${img}`}
         onClick={onClickImage}
       />
-      <CardContent sx={{ height: 80 }}>
-        <Typography variant="body2">
+      <CardContent sx={{ flex: 1, minHeight: 100, maxHeight: 100, overflow: 'hidden', p: 1, position: 'relative' }}>
+        <Typography
+          variant="body2"
+          sx={{
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            display: '-webkit-box',
+            WebkitLineClamp: 3,
+            WebkitBoxOrient: 'vertical',
+          }}
+        >
           {remarks}
         </Typography>
-        <Typography variant="body2">
+        <Typography
+          variant="body2"
+          sx={{
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            display: '-webkit-box',
+            WebkitLineClamp: 3,
+            WebkitBoxOrient: 'vertical',
+          }}
+        >
           {detail}
         </Typography>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          {price}
+        <Typography
+          variant="body2"
+          sx={{
+            color: 'text.secondary',
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            bottom: 0,
+            textAlign: 'left',
+            background: 'white',
+            px: 1,
+            py: 0.5,
+            boxShadow: '0 -2px 8px -4px rgba(0,0,0,0.04)',
+          }}
+          noWrap
+        >
+          {price}원
         </Typography>
       </CardContent>
-      <CardActions>
+      <CardActions sx={{ minHeight: 40, p: 1 }}>
         { link ? (
           <Link
             variant="body2"

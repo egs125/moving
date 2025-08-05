@@ -23,7 +23,7 @@
     "remarks": "약 4년전 모던하우스 구매 + 가죽 테이블 매트만 올해초 구매. 의자 2개 + 벤치 1개",
     "detail": "가로 140cm * 세로 75.5cm * 높이 76cm",
     "link": "",
-    "price": "100,000",
+    "price": "50,000",
     "img": "moving3.jpeg"
   },
   {
@@ -41,7 +41,7 @@
     "remarks": "약 10년전 구매",
     "detail": "가로 120cm * 세로 28.5cm * 높이 124.5cm",
     "link": "",
-    "price": "30,000",
+    "price": "10,000",
     "img": "moving5.jpeg"
   },
   {
@@ -85,7 +85,7 @@
     "remarks": "약 7년전 중고 구매",
     "detail": "LG WF-TS105A",
     "link": "",
-    "price": "30,000",
+    "price": "0",
     "img": "moving10.jpeg"
   },
   {
@@ -94,7 +94,7 @@
     "remarks": "약 4년전 오프라인 구매",
     "detail": "제네바 클래식 S 월넛",
     "link": "https://genevastore.co.kr/classic-s/",
-    "price": "200,000",
+    "price": "400,000",
     "img": "moving11.jpeg"
   }
 ]
